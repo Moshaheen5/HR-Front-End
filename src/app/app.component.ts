@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-import { GeneralSettingsComponent } from './components/general-settings/general-settings.component';
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { AddHolidayComponent } from './components/add-holiday/add-holiday.component';
-=======
->>>>>>> b9204c162b720f8a0420ab3e6e662b624338bde1
+
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AddUser1Component } from './components/add-user1/add-user1.component'; 
 
 import { Component, computed, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
@@ -16,12 +13,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-<<<<<<< HEAD
-  imports: [RouterOutlet , GeneralSettingsComponent,AddHolidayComponent],
-=======
+
 
   imports: [
     RouterOutlet,
@@ -32,9 +28,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
     MatSidenavModule,
     FontAwesomeModule,
     SidebarComponent,
+    AddUser1Component,
+    FormsModule,
+    HttpClientModule
 ],
 
->>>>>>> b9204c162b720f8a0420ab3e6e662b624338bde1
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

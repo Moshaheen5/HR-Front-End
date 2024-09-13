@@ -14,23 +14,17 @@
     "@angular/cdk": "^18.2.3",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
-    "@angular/core": "^18.2.0",
+    "@angular/core": "^18.2.3",
     "@angular/forms": "^18.2.0",
     "@angular/material": "^18.2.3",
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
-<<<<<<< HEAD
-    "bootstrap": "^5.3.3",
-=======
-
     "@fortawesome/angular-fontawesome": "^0.15.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-
->>>>>>> b9204c162b720f8a0420ab3e6e662b624338bde1
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"

@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-.all{
-    background-color: #eff3f8;
-}
-=======
+
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-icon {
-    color: darkslategrey; };
+    color: darkslategrey; }
   
   
 
 
 
->>>>>>> b9204c162b720f8a0420ab3e6e662b624338bde1
+
