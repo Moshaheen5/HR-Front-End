@@ -1,0 +1,32 @@
+<div class="row w-100 h-100">
+  <div class="col-md-1">
+      <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-11 main-data pt-3">
+      <div class="logo">
+        <img src="logo.png" class="img-fluid rounded-start">
+      </div>
+      <div class="title text-center pb-5">
+        {{displayedText}}
+      </div>
+        <div class="mt-2 pb-5">
+          <form action="" method="" class="m-auto rounded p-5">
+            <p class="text-white">Employee Name: </p>
+            <p class="text-white">Department: </p>
+            <div class="mb-3">
+              <label for="attedanceTime" class="form-label text-white mb-0">Attedance Time</label>
+              <input type="time" class="form-control" id="attedanceTime">
+            </div>
+            <div class="mb-3">
+              <label for="departureTime" class="form-label text-white mb-0">Departure Time</label>
+              <input type="time" class="form-control" id="departureTime">
+            </div>
+            <div class="mb-3">
+              <label for="attendanceDate" class="form-label text-white mb-0">Attendance Date</label>
+              <input type="date" class="form-control" id="attendanceDate">
+            </div>
+            <button type="submit" class="btn w-50 m-auto d-block text-white">Update</button>
+          </form>
+        </div>
+      </div>
+</div>

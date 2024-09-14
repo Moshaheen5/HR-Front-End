@@ -6,8 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule }from '@angular/material/list';
 import { CommonModule } from '@angular/common';
-
-
+import { MatTooltipModule } from '@angular/material/tooltip';
 @Component({
   selector: 'app-sidebar',
   standalone: true,
@@ -16,7 +15,8 @@ import { CommonModule } from '@angular/common';
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule,
   
 
   ],
@@ -24,12 +24,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
+logoSrc:string='./assets/images/pioneers.png';
   sideNavCollaps=signal(false);
   @Input() set collapsed(val:boolean){
     this.sideNavCollaps.set(val);
   }
   sideNavMargin=computed(()=> this.sideNavCollaps()? '0' :  '50px');
-
+isExpanded:boolean[]=[false,false,false,false,false,false,false,false];
+toggleIsExpanded(index:number){
+  return this.isExpanded[index]=!this.isExpanded[index];
+}
 menuItems = signal<SidenavIcons[]>([
   {icon:'dashboard',
     label:'DashBoard',
@@ -56,7 +60,7 @@ menuItems = signal<SidenavIcons[]>([
     route:'addholiday'
   },
   {icon:'playlist_add_check_circle',
-    label:'Attendance and Departure',
+    label:'Attendance',
     route:'attendance-departure'
   },
   {icon:'assignment',

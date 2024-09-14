@@ -27,20 +27,17 @@
               }
             ],
             "styles": [
-<<<<<<< HEAD
-              "src/styles.css","node_modules/bootstrap/dist/css/bootstrap.min.css"
-            ],
-            "scripts": [  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
-=======
+
 
               "@angular/material/prebuilt-themes/magenta-violet.css",
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.css"و "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.js"]
-=
->>>>>>> b9204c162b720f8a0420ab3e6e662b624338bde1
+
+
+
           },
           "configurations": {
             "production": {

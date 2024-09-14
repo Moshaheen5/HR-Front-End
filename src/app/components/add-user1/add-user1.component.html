@@ -1,4 +1,5 @@
 <div class="companylogo container mx-5 mt-1"><img class="w-100" [src]="logoSrc"></div>    
+<<<<<<< HEAD
 <h1 class="text-light text-center fs-2">New Admin</h1>
 <form (ngSubmit)="onSubmit()" #userForm="ngForm">
   <h1 class="text-light text-center fs-2">New Admin</h1>
@@ -56,3 +57,45 @@
   <!-- Submit Button -->
   <button type="submit" [disabled]="userForm.invalid">Register</button>
 </form>
+=======
+<div class=" form-container">
+        <form>
+            <h1 class="text-light text-center fs-2">New Admin</h1>
+            <div class="row m-5 my-5">
+                <div class="form-group col-md-6">
+              <label for="fullname" class="text-light">Full Name</label>
+              <input type="text" class="form-control" id="fullname"  placeholder="full name ...">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="exampleInputPassword1" class="text-light">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password...">
+            </div>
+        </div>
+            <div class="row m-5 my-5">
+                <div class="form-group col-md-6">
+              <label for="username" class="text-light">user Name</label>
+              <input type="text" class="form-control" id="username" placeholder="user name ...">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="privileges" class="text-light">Privileges</label>
+              <select type="text" class="form-control" id="privileges">
+                <option value="">Privileges...</option>
+                <option>privilege 1</option>
+                <option>privilege 2</option>
+                <option>privilege 3</option>
+                <option>All</option>
+              </select>
+            </div>
+        </div>
+        <div class="row m-5 my-5">
+            <div class="form-group col-md-12">
+                <label for="email" class="text-light">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="email ....">
+              </div>
+        </div>
+           
+           <div class="row" [style.margin-left]="'120px'"><button type="submit" class="mx-5 w-50 btn">save</button></div>
+         
+          </form>
+    </div>
+>>>>>>> cc6e434043477bab95de448785bbd593647c54db

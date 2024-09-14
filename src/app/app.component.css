@@ -1,6 +1,8 @@
 
 mat-toolbar{
     background-color: #28688B;
+    position: relative;
+    z-index: 5;
 }
 .menu-btn{
    
@@ -9,7 +11,7 @@ mat-toolbar{
     justify-content: center;
     border: none;
     outline: none;
-    transition:  0.5 ease-in;
+
 }
 mat-icon{
     margin-top: 5px;
@@ -20,16 +22,40 @@ mat-icon{
 }
 
 mat-sidenav{
-    margin-right: 20px;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
 }
 mat-sidenav-container{
+    font-family: 'Open Sans',sans-serif;
     height: calc(100vh - 64px);
     
 }
-mat-toolbar{
-    position: relative;
-    z-index: 5;
-}
+
 .content{
-    padding: 24px;
+    padding: 16px;
+}
+mat-sidenav, mat-sidenav-content{
+    transition: all 500ms ease-in-out;
+}
+.login-btn{
+    border: 1px solid #FFF;
+    font-size: 18px;
+    width: 85px;
+    height: 40px; 
+  
+    border-radius: 10px;
+    color: #FFF;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+   
+
+}
+.login-btn:hover{
+    border: none;
+    color: black;
+
+}
+.user{
+    color: #fff;
 }

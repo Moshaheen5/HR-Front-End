@@ -1,14 +1,12 @@
-*{
-    font-family: "Open Sans", sans-serif;
-}
+
 .form-container{
-    margin-left: 450px;
+    margin-left: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 1050px;
-    height: 1000px;
+    width: 800px;
+    height: 900px;
     padding-top: -50px;
 }
 form{
@@ -24,23 +22,23 @@ h1{
     margin-bottom: 120px;
 }
 .companylogo{
-    margin-left: 500px;
-    height: 200px;
-    width: 300px;
+    margin-left: 200px;
+    height: 100px;
+    width: 200px;
 }
 
 label{
-    font-size: 24px;
+    font-size: 20px;
     padding-bottom: 12px;
  
 }
 input, select, button{
-    height: 50px;
+    height: 40px;
 }
 button{
+    font-size: 20px;
+    font-weight: 400;
     color: white;
-    font-size: 24px;
-    font-weight: 500;
     border-color: white;
   
 }

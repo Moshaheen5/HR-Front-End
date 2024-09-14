@@ -1,12 +1,23 @@
 
 
-<mat-toolbar class=" mat-toolbar mat-elevation-z3">
-<button mat-icon-button class="menu-btn" (click)="collapsed.set(!collapsed())">  <mat-icon>menu</mat-icon>
-</button>
-</mat-toolbar> 
+<mat-toolbar class="col-md-1 mat-toolbar mat-elevation-z3">
+  <button mat-icon-button class="menu-btn" (click)="collapsed.set(!collapsed())">
+    <mat-icon>menu</mat-icon></button>
+  <span class="col-md-10 mat-toolbar-spacer"></span>
+ <a class="col-md-1 me-5 "
+ [routerLink]="['login']" 
+ routerLinkActive="''" 
+ >
+  <!-- <span class="user"> User1 </span> -->
+  <button class="login-btn">Login</button></a>
+
+
+
+</mat-toolbar>
+
 
 <mat-sidenav-container class="">
-  <mat-sidenav opened mode="side" [style.width]="sideNavWidth()">
+  <mat-sidenav opened mode="side" [style.width]="sideNavWidth()" *ngIf="!isLogin()">
     <app-sidebar [collapsed]="collapsed()"></app-sidebar>
   </mat-sidenav> 
 
