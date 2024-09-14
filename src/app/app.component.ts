@@ -1,14 +1,15 @@
 
 
+
 import { routes } from './app.routes';
 
 import { GeneralSettingsComponent } from './components/general-settings/general-settings.component';
+import { Component } from '@angular/core';
 
 import { AddHolidayComponent } from './components/add-holiday/add-holiday.component';
 
 
-
-import { Component, computed, signal } from '@angular/core';
+import { computed, signal } from '@angular/core';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SalaryReportComponent } from './components/salary-report/salary-report.component';
@@ -21,9 +22,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { LoginComponent } from './components/login/login.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+
 import { FormsModule } from '@angular/forms';
-import { AddUser1Component } from './components/add-user1/add-user1.component';
+
+
 
 
 @Component({
@@ -41,9 +44,8 @@ import { AddUser1Component } from './components/add-user1/add-user1.component';
     MatSidenavModule,
     FontAwesomeModule,
     SidebarComponent,
-    AddUser1Component,FormsModule,
-    HttpClientModule,
- 
+FormsModule,
+    
     LoginComponent,
     SalaryReportComponent,
     AttenedanceDepartureComponent, GeneralSettingsComponent,
@@ -59,7 +61,9 @@ export class AppComponent {
   constructor(private router:Router){}
 
   isLogin():boolean{
-    return this.router.url === 'login';
+
+    return this.router.url === '/login';
+
   }
   collapsed=signal(false);
   sideNavWidth=computed(()=>this.collapsed() ? '64px': '250px');

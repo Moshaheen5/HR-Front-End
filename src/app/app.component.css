@@ -58,4 +58,9 @@ mat-sidenav, mat-sidenav-content{
 }
 .user{
     color: #fff;
+
+}
+.nav-a{
+    text-decoration: none;
+
 }

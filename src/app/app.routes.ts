@@ -24,6 +24,7 @@ export const routes: Routes = [
      {path:'login',component:LoginComponent,title:'Login'},
      {path:'salaryreport',component:SalaryReportComponent,title:'salasryReport'},
 
+
      {path:'**', component: HomePageComponent, title:'Page Not Found'}
 ];
 

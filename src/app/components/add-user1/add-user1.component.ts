@@ -1,11 +1,23 @@
+import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
+
+
 import { HttpClient } from '@angular/common/http';
-import { FormsModule} from '@angular/forms';
 import { SidebarComponent } from '../sidebar/sidebar.component';
+import { MatFormField } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { NgStyle } from '@angular/common';
+
 @Component({
   selector: 'app-add-user1',
   standalone: true,
-  imports: [FormsModule,SidebarComponent],
+  imports: [MatFormField,
+    FormsModule,
+    MatInputModule,
+    MatSelectModule,
+    NgStyle
+  ],
   templateUrl: './add-user1.component.html',
   styleUrl: './add-user1.component.css'
 })
