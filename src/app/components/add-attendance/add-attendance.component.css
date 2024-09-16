@@ -6,8 +6,25 @@ body
 {
   width: 20%;
 }
+.btn-back{
+    border: 1px solid #FFF;
+    font-size: 18px;
+    width: 85px;
+    height: 40px; 
+  background-color:transparent;
+    border-radius: 10px;
+    border-color: #28688B;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+.btn-back:hover{
+ 
+        border: none;
+
+}
 .title
 {
+    color: #0B5E84;
   font-size: 2rem;
   text-transform: capitalize;
 }
@@ -25,7 +42,7 @@ body
 }
 form
 {
-  width: 36%;
+  width: 75%;
 }
 .month,.year,.submit
 {
@@ -73,6 +90,18 @@ td
   font-size: 30px;
 }
 
-table {
-  width: 100%;
+form
+{
+  box-shadow: 10px 10px 10px gainsboro;
+  border: 2px solid #0B5E84 !important;
+  background-color: #0B5E84;
 }
+button
+{
+  border:1px solid #979696;
+}
+button:hover
+{
+  border:1px solid #369bd2;
+}
+

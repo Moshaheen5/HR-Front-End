@@ -1,63 +1,4 @@
-<div class="companylogo container mx-5 mt-1"><img class="w-100" [src]="logoSrc"></div>    
-<<<<<<< HEAD
-<h1 class="text-light text-center fs-2">New Admin</h1>
-<form (ngSubmit)="onSubmit()" #userForm="ngForm">
-  <h1 class="text-light text-center fs-2">New Admin</h1>
-  
-  <!-- Full Name Field -->
-  <div>
-    <label for="fullname">Full Name</label>
-    <input type="text" id="fullname" required [(ngModel)]="user.fullname" name="fullname" #fullname="ngModel">
-    <!-- Angular version of conditional rendering -->
-     @if(fullname.invalid && fullname.touched){
-       <div  class="error">Full name is required</div>
-      }
-  </div>
 
-  <!-- Email Field -->
-  <div>
-    <label for="email">Email</label>
-    <input type="email" id="email" required [(ngModel)]="user.email" name="email" #email="ngModel">
-    @if(email.invalid && email.touched){
-
-      <div class="error">Valid email is required</div>
-    }
-  </div>
-
-  <!-- Username Field -->
-  <div>
-    <label for="username">Username</label>
-    <input type="text" id="username" required [(ngModel)]="user.username" name="username" #username="ngModel">
-    @if(username.invalid && username.touched){
-
-      <div class="error">Username is required</div>
-    }
-  </div>
-
-  <!-- Password Field -->
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" required [(ngModel)]="user.password" name="password" #password="ngModel">
-    @if(password.invalid && password.touched){
-
-      <div class="error">Password is required</div>
-    }
-  </div>
-
-  <!-- Group Field -->
-  <div>
-    <label for="group">Group</label>
-    <input type="text" id="group" required [(ngModel)]="user.group" name="group" #group="ngModel">
-    @if(group.invalid && group.touched){
-
-      <div class="error">Group is required</div>
-    }
-  </div>
-
-  <!-- Submit Button -->
-  <button type="submit" [disabled]="userForm.invalid">Register</button>
-</form>
-=======
 <div class=" form-container">
         <form>
             <h1 class="text-light text-center fs-2">New Admin</h1>
@@ -70,7 +11,7 @@
               <mat-label for="exampleInputPassword1" class="text-light">Password</mat-label>
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password...">
             </div>
-        </div>
+        
             <div class="row m-5 my-5">
                 <div class="form-group col-md-6">
               <mat-label for="username" class="text-light">user Name</mat-label>
@@ -84,24 +25,13 @@
                   'height':'40px',
                   'border-radius':'5px',
                 }">
-
-                    <mat-option value="privilege 1">privilege 1</mat-option>
-                    <mat-option value="privilege 2" >privilege 2</mat-option>
-                    <mat-option value="privilege 3">privilege 3</mat-option>
-                    <mat-option value="All">All</mat-option>
-              </mat-select> 
-             
+                </mat-select>
             </div>
-        </div>
-        <div class="row m-5 my-5">
-            <div class="form-group col-md-12">
-                <mat-label for="email" class="text-light">Email</mat-label>
-                <input type="email" class="form-control" id="email" placeholder="email ....">
-              </div>
-        </div>
-           
-           <div class="row" [style.margin-left]="'120px'"><button type="submit" class="mx-5 w-50 btn">save</button></div>
-         
-          </form>
-    </div>
->>>>>>> cc6e434043477bab95de448785bbd593647c54db
+
+
+
+            </form>
+      </div>
+
+
+

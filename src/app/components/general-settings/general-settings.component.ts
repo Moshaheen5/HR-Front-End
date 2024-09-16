@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './general-settings.component.css'
 })
 export class GeneralSettingsComponent {
-
+  logoSrc:string='./assets/images/pioneerslogo(1).png';
 }

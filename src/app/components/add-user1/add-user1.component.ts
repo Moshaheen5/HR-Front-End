@@ -7,7 +7,9 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 import { MatFormField } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { NgStyle } from '@angular/common';
+import { CommonModule, NgStyle } from '@angular/common';
+import { group } from '@angular/animations';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-add-user1',
@@ -16,12 +18,14 @@ import { NgStyle } from '@angular/common';
     FormsModule,
     MatInputModule,
     MatSelectModule,
-    NgStyle
+    CommonModule,
+    RouterModule
   ],
   templateUrl: './add-user1.component.html',
   styleUrl: './add-user1.component.css'
 })
 export class AddUser1Component {
+
   logoSrc:string='./assets/images/pioneerslogo(1).png';
   user = {
     fullname: '',
@@ -43,5 +47,19 @@ export class AddUser1Component {
           console.error('Error occurred during registration', error);
         });
     }
+
+
+ 
+
+
+
+
+
+
+ 
+
+
   }
+
+  
 }

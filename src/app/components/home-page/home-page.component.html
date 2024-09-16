@@ -1,47 +1,196 @@
 <div class="container mt-2 text-light">
 
-    <div class="row pt-3">
-        <div class="col-md-6">
-            <div class="card admin-card" [style.height]="'65px'">
-                <h3 class="me-5">Admin Board</h3>
+
+
+    <div class="row pt-1 me-5 w-100">
+      <p class="fs-2 mb-5 ms-auto"  [style.color]="'#4883a3'" >Admin Board</p>
+    </div>
+    <div class="row pt-2 w-100">
+            <div class="col-md-3 mb-3">
+                <mat-card class="p-3" [style.background-color]="'#225470'">
+                    <mat-card-header class="ms-auto">
+                        <fa-icon [icon]="userGroupIcon"></fa-icon>
+                    </mat-card-header>
+                    <mat-card-content class="me-auto text-center">
+                        <p class="fs-7">Employees</p>
+                        <p class="fs-2">{{counts.totalemployees}}</p>
+                    </mat-card-content>
+                </mat-card>
             </div>
-        </div>
+    
+          <div class="col-md-3 mb-3">
+            <mat-card class="p-3">
+              <mat-card-header class="ms-auto">
+                <fa-icon [icon]="doorOpenIcon"></fa-icon>
+              </mat-card-header>
+              <mat-card-content class="me-auto text-center ">
+                <p class="fs-7">Visits</p>
+                <p class="fs-2">{{counts.totalusers}}</p>
+              </mat-card-content>
+            </mat-card></div>
+        
+    
+          <div class="col-md-3 mb-3">
+            <mat-card class="p-3" [style.background-color]="'#FFCC6F'">
+              <mat-card-header class="ms-auto">
+                <fa-icon [icon]="usersLineIcon"></fa-icon>
+              </mat-card-header>
+              <mat-card-content class="me-auto text-center">
+                <p class="fs-7">Groups</p>
+                <p class="fs-2">{{counts.totalgroups}}</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+    
+          <div class="col-md-3 mb-3">
+            <mat-card class="p-3">
+              <mat-card-header class="ms-auto">
+                <fa-icon [icon]="fileInvoice"></fa-icon>
+              </mat-card-header>
+              <mat-card-content class="me-auto text-center">
+                <p class="fs-7">Reports</p>
+                <p class="fs-2">{{counts.totalreports}}</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
       
     </div>
-    <div class="row pt-3">
-        <div class="col-md-6">
-            <div class="card" [style.background-color]="'#EBBA1B'">
-                <fa-icon class="col-md-6" [icon]="userGroupIcon"></fa-icon>
-                <p class="label-card fs-3 col-md-4">All Employees </p>
-                <p class="total-card fs-2 col-md-2"> 200</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card" >
-                <fa-icon class="col-md-6" [icon]="doorOpenIcon"></fa-icon>
-                <p class="label-card fs-3 col-md-4">Visits</p>
-                <p class="total-card fs-2 col-md-2"> 50</p>
-            </div>
-        </div>
+    <div class="row p-5 w-100 d-flex justify-content-between align-items-center lh-base">
+    
+      <div class="col-md-5 fs-2 text-dark fw-bold ms-3">Enjoy Your system Management Dashboard.</div>
+       <div class="onb col-md-3 mt-5"> <img src="./assets/images/onboarding.png"></div>
+    
     </div>
 
+    
 
-    <div class="row pt-3">
-        <div class="col-md-6">
-            <div class="card">
-                <mat-icon class="col-md-6"></mat-icon>
-                <fa-icon class="col-md-6" [icon]="usersLineIcon"></fa-icon>
 
-                <p class="label-card fs-3 col-md-4">Groups </p>
-                <p class="total-card fs-2 col-md-2"> 12</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card" [style.background-color]="'#225470'">
-                <fa-icon class="col-md-6" [icon]="fileInvoice"></fa-icon>
-                <p class="label-card fs-3 col-md-4">Reports</p>
-                <p class="total-card fs-2 col-md-2"> 153</p>
-            </div>
-        </div>
-    </div>
+    <!-- table of admins -->
+    <!-- <div class="row table-row pb-5">
+      
+      <mat-label class="fs-5 mb-3 ms-auto"  [style.color]="'#4883a3'" >Admins</mat-label>
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+      
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef> Weight </th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> Symbol </th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                       showFirstLastButtons
+                       aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </div>
+      
+              
+  </div>  -->
 </div>
+=======
+  <div class="logo">
+    <img src="logo.png" class="img-fluid rounded-start">
+  </div>
+  <div class="title text-center pb-5 text-dark">
+    {{displayedText}}
+  </div>
+    <div class="row pt-2">
+         <div class="col-md-3">
+            <div class="card p-3" [style.background-color]="'#FFCC6F'">
+                <mat-card-header class="ms-auto"><fa-icon class="" [icon]="userGroupIcon"></fa-icon ></mat-card-header>
+                <mat-card-content class="mx-auto "><p class="card-head d-flex-block mb-0">All Employees </p><p class="card-head fs-2 d-flex-block">200</p></mat-card-content>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card p-3" >
+
+                <mat-card-header class="ms-auto"><fa-icon class="" [icon]="doorOpenIcon"></fa-icon></mat-card-header>
+                <mat-card-content class="mx-auto "><p class="card-head fs-7 d-flex-block mb-0">Visits</p><p class="card-head fs-2 d-flex-block">50</p></mat-card-content>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card p-3" [style.background-color]="'#225470'">
+
+                <mat-card-header class="ms-auto"><fa-icon class="" [icon]="usersLineIcon"></fa-icon></mat-card-header>
+                <mat-card-content class="mx-auto "><p class="card-head fs-7 d-flex-block mb-0">Groups</p><p class="card-head fs-2 d-flex-block">12</p></mat-card-content>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card p-3" >
+
+                <mat-card-header class="ms-auto"><fa-icon class="" [icon]="fileInvoice"></fa-icon></mat-card-header>
+                <mat-card-content class="mx-auto "><p class="card-head fs-7 d-flex-block mb-0">Reports</p><p class="card-head fs-2 d-flex-block">153</p></mat-card-content>
+            </div>
+        </div>
+
+    </div>
+
+<!-- table of employees -->
+    <div class="row table-row">
+
+        <mat-label class="fs-5 mb-3 ms-auto"  [style.color]="'#4883a3'" >employees</mat-label>
+              <div [ngStyle]="{'background-color':'white'}"><mat-form-field>
+                 <div [ngStyle]="{'color':'#4883a3'}"> <mat-label >Filter</mat-label></div>
+
+                  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+                </mat-form-field></div>
+
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                  </ng-container>
+
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                  </ng-container>
+
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="weight">
+                    <th mat-header-cell *matHeaderCellDef> Weight </th>
+                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                  </ng-container>
+
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="symbol">
+                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                  <!-- Row shown when there is no matching data. -->
+                  <tr class="mat-row" *matNoDataRow>
+                    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                  </tr>
+                </table>
+
+    </div>
+
+

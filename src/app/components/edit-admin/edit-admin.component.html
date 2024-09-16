@@ -1,0 +1,59 @@
+<div class="col-8 mx-auto">
+    <div class="card" [ngStyle]="{'background-color':'transparent','border':'none'}">
+      <div class="card-title d-flex justify-content-between align-items-center"[ngStyle]="{'display':'inline-block','margin-bottom':'20px'}" >
+          <p [ngStyle]="{'color':'#28688B'}" class="fs-3 m-0">Edit Admin</p>
+            <a class="nav-a" [routerLink]="['homepage']" routerLinkActive="''" >
+                <button class="btn-back">back</button></a>
+        </div>
+        <div class="container">
+            <form (ngSubmit)="formsubmit()">
+                <div class="row m-5 my-5">
+                    <div class="form-group col-md-6">
+                  <mat-label for="fullname" class="text-light">Full Name</mat-label>
+                  <input type="text" class="form-control" [(ngModel)]="fullname" name="fullname"  placeholder="full name ...">
+                </div>
+               <div class="form-group col-md-6">
+                  
+                   <mat-label for="privileges" class="text-light">Privileges</mat-label>
+                    <mat-select type="text" class="px-3 pt-2" [(ngModel)]="privileges"[ngStyle]="{
+                      'background-color':'white',
+                      'height':'40px',
+                      'border-radius':'5px',
+                    }">
+    
+                        <mat-option value="privilege 1">privilege 1</mat-option>
+                        <mat-option value="privilege 2" >privilege 2</mat-option>
+                        <mat-option value="privilege 3">privilege 3</mat-option>
+                        <mat-option value="All">All</mat-option>
+                  </mat-select> 
+                 
+            </div> </div>
+                <div class="row m-5 my-5">
+                    <div class="form-group col-md-6">
+                  <mat-label for="username" class="text-light">user Name</mat-label>
+                  <input type="text" class="form-control" [(ngModel)]="username" name="username" placeholder="user name ...">
+                </div>
+                <div class="form-group col-md-6">
+                  <mat-label for="password" class="text-light">Password</mat-label>
+                  <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Password...">
+                </div>
+               
+                </div>
+                
+                 
+            <input type="hidden" class="form-control" [(ngModel)]="groupid" name="email" placeholder="email ....">
+                
+            
+            <div class="row m-5 my-5">
+                <div class="form-group col-md-12">
+                    <mat-label for="email" class="text-light">Email</mat-label>
+                    <input type="email" class="form-control" [(ngModel)]="email" name="email" placeholder="email ....">
+                  </div>
+            </div>
+               
+               <div class="row" [style.margin-left]="'120px'"><button type="submit" (click)="submituser1()" class="mx-5 w-50 btn">save</button></div>
+             
+              </form>
+            </div>
+    </div>
+</div>
