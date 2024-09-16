@@ -34,6 +34,8 @@ loadEmployees(){
   this.attendanceService.getEmployees()
     .subscribe({
       next: (em:any) => {
+        console.log(em);
+        
         this.employees =em;
         this.isLoading=false;
        },

@@ -1,6 +1,4 @@
 import { Component , ViewChild,AfterViewInit} from '@angular/core';
-import { SidebarComponent } from '../sidebar/sidebar.component';
-import {MatTooltipModule} from '@angular/material/tooltip';
 import { AttendanceResponse, AttendanceService } from '../../Services/attendnace/attendance.service';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -14,7 +12,7 @@ import { LoaderComponent } from "../loader/loader.component";
 @Component({
   selector: 'app-attenedance-departure',
   standalone: true,
-  imports: [RouterModule, MatPaginatorModule, MatTableModule, SidebarComponent, MatTooltipModule, CommonModule, MatCardModule, FontAwesomeModule, LoaderComponent],
+  imports: [RouterModule, MatPaginatorModule, MatTableModule, CommonModule, MatCardModule, FontAwesomeModule, LoaderComponent],
   templateUrl: './attenedance-departure.component.html',
   styleUrl: './attenedance-departure.component.css'
 })
