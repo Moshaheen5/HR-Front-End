@@ -34,4 +34,9 @@ export const routes: Routes = [
      {path:'editattendance/:id',component:EditAttendaceComponent,title:'edit Attendance'},
      {path:'login',component:LoginComponent,title:'Login'},
      {path:'salaryreport',component:SalaryReportComponent,title:'salasryReport'},
-     {path:'**', component: HomePageComponent, title:'Page Not Found'} ]
+
+
+     {path:'**', component: HomePageComponent, title:'Page Not Found'}
+];
+
+ 

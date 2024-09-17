@@ -1,5 +1,7 @@
-import { DashService } from './../../Services/dashboard/dash.service';
-import { AttendanceService } from './../../Services/attendnace/attendance.service';
+import { DashService } from './../../services/dashboard/dash.service';
+
+
+
 import { Component, ViewChild,AfterViewInit, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -26,6 +28,7 @@ import { CommonModule } from '@angular/common';
    MatInputModule,
    MatCardModule,
    CommonModule,
+   
 
   ],
 })
@@ -61,4 +64,3 @@ export class HomePageComponent implements OnInit {
   usersLineIcon=faUsersLine;
 
 }
-

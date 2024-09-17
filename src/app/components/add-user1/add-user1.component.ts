@@ -1,6 +1,10 @@
 import { AdminService } from './../../Services/Admin/admin.service';
 import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
+
+
+import { HttpClient } from '@angular/common/http';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 import { MatFormField } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -22,6 +26,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './add-user1.component.css'
 })
 export class AddUser1Component {
+
 constructor(private adminService:AdminService){}
   // declare inputs
 
@@ -62,6 +67,10 @@ loadGroups(){
       password : this.password,
     }
 
+
+  logoSrc:string='./assets/images/pioneerslogo(1).png';
+
+
     this.adminService.setAdmin(inputs).subscribe({
       next: (res:any)=>{
         console.log(res);    
@@ -85,6 +94,7 @@ loadGroups(){
 }
 
 
+
 submituser1() {
 
 }
@@ -104,5 +114,8 @@ submituser1() {
       }
     };
     type();
+
   }
+
+  
 }
