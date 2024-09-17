@@ -1,5 +1,9 @@
 import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
+
+
+import { HttpClient } from '@angular/common/http';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 import { MatFormField } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -21,52 +25,41 @@ import { RouterModule } from '@angular/router';
   styleUrl: './add-user1.component.css'
 })
 export class AddUser1Component {
-  // declare inputs
-fullname!:string
-privileges!:string
-username!:string
-email!:string
-password!:string
-groupid!:number
 
-  formsubmit() {
-    var inputs ={
-      fullname : this.fullname,
-      privileges : this.privileges,
-      username : this.username,
-      email : this.email,
-      password : this.password,
-      group_id: this.groupid
-    }
-throw new Error('Method not implemented.');
-}
-
-
-
-
-
-submituser1() {
- 
-throw new Error('Method not implemented.');
-}
   logoSrc:string='./assets/images/pioneerslogo(1).png';
-  fullText: string = 'New Admin';
-  displayedText: string = '';
-  typingSpeed: number = 100; // Speed of typing in milliseconds
+  user = {
+    fullname: '',
+    email: '',
+    username: '',
+    password: '',
+    group: ''
+  };
 
-  ngOnInit(): void {
-    this.typeWriter();
+  constructor(private http: HttpClient) {}
+
+  onSubmit() {
+    if (this.user.fullname && this.user.email && this.user.username && this.user.password && this.user.group) {
+      // Send the data to Laravel API
+      this.http.post('http://localhost:8000/api/register', this.user)
+        .subscribe(response => {
+          console.log('User registered successfully', response);
+        }, error => {
+          console.error('Error occurred during registration', error);
+        });
+    }
+
+
+ 
+
+
+
+
+
+
+ 
+
+
   }
 
-  typeWriter(): void {
-    let i = 0;
-    const type = () => {
-      if (i < this.fullText.length) {
-        this.displayedText += this.fullText.charAt(i);
-        i++;
-        setTimeout(type, this.typingSpeed); // Adjust typing speed here
-      }
-    };
-    type();
-  }
+  
 }

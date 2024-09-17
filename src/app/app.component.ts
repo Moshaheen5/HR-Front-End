@@ -1,4 +1,6 @@
 
+
+
 import { routes } from './app.routes';
 
 import { GeneralSettingsComponent } from './components/general-settings/general-settings.component';
@@ -18,6 +20,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 
+
+
+
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -35,9 +42,12 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatSidenavModule,
     SidebarComponent,
+FormsModule,
+    
     LoginComponent,
     SalaryReportComponent,
     AttenedanceDepartureComponent, GeneralSettingsComponent,
+
 
 ],
 
@@ -49,7 +59,9 @@ export class AppComponent {
   constructor(private router:Router){}
 
   isLogin():boolean{
+
     return this.router.url === '/login';
+
   }
   collapsed=signal(false);
   sideNavWidth=computed(()=>this.collapsed() ? '64px': '250px');

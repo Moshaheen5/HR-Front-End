@@ -49,7 +49,7 @@ menuItems = signal<SidenavIcons[]>([
   },
   {icon:'group_add',
     label:'Register Employee',
-    route:'addemployee'
+    route:'addadmin'
   },
   {icon:'settings_b_roll',
     label:'General Settings',

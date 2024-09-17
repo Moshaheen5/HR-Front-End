@@ -81,6 +81,11 @@ mat-icon, fa-icon{
     width: 55px;
 }
 
+.label-card{
+    
+    padding: 5px 8px 0 8px;
+    font-size:18px ;}
+
 
 /* table css */
 table {
@@ -94,5 +99,7 @@ table {
 .mat-mdc-form-field {
   font-size: 14px;
   width: 100%;
+
+
 }
 

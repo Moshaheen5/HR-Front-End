@@ -1,5 +1,6 @@
 import { Component , ViewChild,AfterViewInit} from '@angular/core';
 import { AttendanceResponse, AttendanceService } from '../../Services/attendnace/attendance.service';
+import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import {MatTableDataSource, MatTableModule}from '@angular/material/table'
@@ -22,11 +23,29 @@ export class AttenedanceDepartureComponent {
   onboard:any='./assets/images/onboard(1).png';
   isLoading: boolean=false;
   displayedColumns: string[] = ['id','employee_name', 'department_name', 'check_in', 'check_out','date','hours', 'status'];
-  
+  employeeName: string = '';
+  month: number = new Date().getMonth() + 1; 
+  year: number = new Date().getFullYear(); 
+
+  employees: any[] = [];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   
-  constructor (private attendanceService : AttendanceService){}
- 
+  constructor (private attendanceService : AttendanceService,private http: HttpClient){}
+  searchEmployee() {
+    const params = {
+      name: this.employeeName,
+      month: this.month,
+      year: this.year
+    };
+
+    this.http.get<any[]>('/api/employee/search', { params })
+      .subscribe(response => {
+        this.employees = response;
+      }, error => {
+        console.error(error);
+      });
+  }
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
