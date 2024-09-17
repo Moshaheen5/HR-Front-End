@@ -1,3 +1,4 @@
+import { AdminService } from './../../Services/Admin/admin.service';
 import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 
@@ -26,38 +27,93 @@ import { RouterModule } from '@angular/router';
 })
 export class AddUser1Component {
 
-  logoSrc:string='./assets/images/pioneerslogo(1).png';
-  user = {
-    fullname: '',
-    email: '',
-    username: '',
-    password: '',
-    group: ''
-  };
+constructor(private adminService:AdminService){}
+  // declare inputs
 
-  constructor(private http: HttpClient) {}
+fullname:string='';
+username:string='';
+email:string='';
+password:string='';
+errors:any=[];
+group_id:number=0;
+privileges:any[]=[];
+groups:any[]=[];
+isLoadig:boolean=false;
+loadingtitle='loading';
+ngOnInit(){
+this.loadGroups();
+this.typeWriter();
+}  
+loadGroups(){
+  this.adminService.getGroup().subscribe((res:any)=>{
+    console.log('API Response:', res);
 
-  onSubmit() {
-    if (this.user.fullname && this.user.email && this.user.username && this.user.password && this.user.group) {
-      // Send the data to Laravel API
-      this.http.post('http://localhost:8000/api/register', this.user)
-        .subscribe(response => {
-          console.log('User registered successfully', response);
-        }, error => {
-          console.error('Error occurred during registration', error);
-        });
+   this.groups=res.groups || [];
+   
+  // Map the privileges
+  this.privileges = this.groups.flatMap((group: any) => group.privileges || []); // Use empty array if undefined
+    console.log('Privileges:', this.privileges);
+  })
+}
+
+  formsubmit() {
+    
+    var inputs ={
+
+      fullname : this.fullname,
+      group_id : this.group_id,
+      username : this.username,
+      email : this.email,
+      password : this.password,
     }
 
 
+  logoSrc:string='./assets/images/pioneerslogo(1).png';
+
+
+    this.adminService.setAdmin(inputs).subscribe({
+      next: (res:any)=>{
+        console.log(res);    
+        alert(res.message);
+        this.fullname='';
+        this.username='';
+        this.email='';
+        this.password='';
+        this.group_id=0;
+       
+      },
+      error: (er)=>{
+        console.log('error log',er);
+        
+        this.errors=er.error.errors;
+     
+      }
+    });
+    
+
+}
+
+
+
+submituser1() {
+
+}
+  logoSrc:string='./assets/images/pioneerslogo(1).png';
+  fullText: string = 'New Admin';
+  displayedText: string = '';
+  typingSpeed: number = 100; // Speed of typing in milliseconds
+
  
-
-
-
-
-
-
- 
-
+  typeWriter(): void {
+    let i = 0;
+    const type = () => {
+      if (i < this.fullText.length) {
+        this.displayedText += this.fullText.charAt(i);
+        i++;
+        setTimeout(type, this.typingSpeed); // Adjust typing speed here
+      }
+    };
+    type();
 
   }
 

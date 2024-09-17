@@ -36,8 +36,6 @@ address:string='';
 department_id:string='';
 gender: any='';
 doa:Date | undefined;
-departure:string='';
-
 errors:any=[];
 departments:any[]=[];
 constructor(private employeeService:EmployeeService){}

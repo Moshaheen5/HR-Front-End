@@ -63,7 +63,7 @@ export class AppComponent {
     return this.router.url === '/login';
 
   }
-  collapsed=signal(false);
+  collapsed=signal(true);
   sideNavWidth=computed(()=>this.collapsed() ? '64px': '250px');
 
 }

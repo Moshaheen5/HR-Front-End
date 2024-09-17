@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-export interface employee{
-  
+export interface employeeResponse{
+  id:number;
   name:String;
   phone:string;
   salary:string;
   hire_date:Date | undefined;
-  nationalId:string;
+  ssn:string;
   address:string;
   department_id:string;
   gender: any;
   doa:Date | undefined;
-  departure:string;
+ 
   }
 @Injectable({
   providedIn: 'root'
@@ -26,7 +26,7 @@ export class EmployeeService {
   setEmployees(inputs:any){
     return this.httpClient.post(`http://127.0.0.1:8000/api/employees`,inputs);
   }
-  getEmployees(inputs:any){
-    return this.httpClient.get(`http://127.0.0.1:8000/api/employees`,inputs);
+  getEmployees(){
+    return this.httpClient.get(`http://127.0.0.1:8000/api/employees`);
   }
 }

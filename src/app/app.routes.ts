@@ -13,21 +13,25 @@ import { AttenedanceDepartureComponent } from './components/attenedance-departur
 import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
 import { EditAdminComponent } from './components/edit-admin/edit-admin.component';
 import { AddAttendanceComponent } from './components/add-attendance/add-attendance.component';
+import { EmployeesComponent } from './components/employees/employees.component';
+import { AdminsComponent } from './components/admins/admins.component';
 
 export const routes: Routes = [
     {path:'',redirectTo:'homePage',pathMatch:'full'},
     {path:'login',component:LoginComponent},
     {path: 'homePage',component: HomePageComponent, title:'HomePage'},
     {path: 'addgroup',component: AddGroupComponent, title:'Add Group'},
+    {path:'admins',component:AdminsComponent,title:'Admins'},
     {path:'addadmin',component:AddUser1Component,title:'Add Admin'},
     {path:'editadmin',component:EditAdminComponent,title:'edit Admin'},
+    {path:'employees',component:EmployeesComponent,title:'Employees'},
     {path:'addemployee',component:AddUser2Component,title:'Add Employee'},
     {path:'editemployee',component:EditEmployeeComponent,title:'edit Employee'},
     {path:'generalsettings',component:GeneralSettingsComponent,title:'General Settings'},
     {path: 'addholiday',component: AddHolidayComponent, title:'Add Holiday'},
      {path:'addattendance',component:AddAttendanceComponent,title:'new Attendance'},
      {path:'attendance-departure',component:AttenedanceDepartureComponent,title:'Attendance'},
-     {path:'editattendance',component:EditAttendaceComponent,title:'edit Attendance'},
+     {path:'editattendance/:id',component:EditAttendaceComponent,title:'edit Attendance'},
      {path:'login',component:LoginComponent,title:'Login'},
      {path:'salaryreport',component:SalaryReportComponent,title:'salasryReport'},
 

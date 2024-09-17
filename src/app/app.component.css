@@ -14,7 +14,7 @@ mat-toolbar{
 
 }
 mat-icon{
-    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 30px;
    width: 50px;
    height: 40px;  
@@ -25,6 +25,7 @@ mat-sidenav{
     margin: 0;
     padding: 0;
     margin-right: 10px;
+    
 }
 mat-sidenav-container{
     font-family: 'Open Sans',sans-serif;
