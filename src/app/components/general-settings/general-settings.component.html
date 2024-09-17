@@ -4,35 +4,23 @@
     <h2 >General Settings</h2>
 
     <div class="form-group m-2">
-      <label for="addons">Add-ons</label>
-      <input type="number" id="addons" class="form-control">
+      <label  for="bonus">Add-ons</label>
+      <input  type="number" id="bonus" formControlName="bonus" required class="form-control">
     </div>
 
     <div class="form-group m-2">
-      <label for="discounts">Discounts</label>
-      <input type="number" id="discounts" class="form-control">
+      <label for="deduction">Discounts</label>
+      <input  type="number" id="deduction" formControlName="deduction" required class="form-control">
     </div>
 
     <div class="form-group m-2">
-      <label for="holiday1">Official holiday 1</label>
-      <select id="holiday1" class="form-control">
-        <option value="" disabled selected>Select Holiday Option</option>
-        <option value="type1">Type 1</option>
-        <option value="type2">Type 2</option>
-        <option value="type3">Type 3</option>
-        <option value="type4">Type 4</option>
-      </select>
+      <label for="weekendDay1">Weekend Day 1:</label>
+      <input type="text" id="weekendDay1" formControlName="weekendDay1" required>
     </div>
 
     <div class="form-group m-2">
-      <label for="holiday2">Official holiday 2</label>
-      <select id="holiday2" class="form-control">
-        <option value="" disabled selected>Select Holiday Option</option>
-        <option value="type1">Type 1</option>
-        <option value="type2">Type 2</option>
-        <option value="type3">Type 3</option>
-        <option value="type4">Type 4</option>
-      </select>
+      <label for="weekendDay2">Weekend Day 2:</label>
+      <input type="text" id="weekendDay2" formControlName="weekendDay2" required>
     </div>
 
     <div class="form-group m-3">
